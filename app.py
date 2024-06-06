@@ -1,4 +1,5 @@
 import streamlit as st
+from google_maps_embed_helper import generate_google_maps_embed
 import random
 
 barcelona_activities = [
@@ -155,6 +156,8 @@ def random_place():
     place = random.choice(barcelona_places)
     return place
 
+
+
 st.title("What to Do @ BCN")
 
 if st.button("What to Do"):
@@ -167,5 +170,8 @@ if st.button("What to Do"):
     " "
     "📍: " + place
 
+    iframe_html = generate_google_maps_embed(place)
 
-#AIzaSyBNytSQe1JJJuZtnoSdaruJBcPh1F-6C0s
+    st.components.v1.html(iframe_html, height=450)
+
+    
