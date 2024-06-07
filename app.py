@@ -158,20 +158,41 @@ def random_place():
 
 
 
-st.title("What to Do @ BCN")
+
+# HTML and CSS to center align content
+st.markdown("""
+    <style>
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .container {
+        max-width: 600px;
+        margin: auto;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+# Center align content
+st.markdown('<div class="center container">', unsafe_allow_html=True)
+
+st.title("BCN Move 🇪🇸")
+st.text(" \n")
 
 if st.button("What to Do"):
+    st.text(" \n")
     place = random_place()
     activity = place_to_activity[place]
 
-    # Contents
-    activity    
+    st.markdown(f"**{activity}**")
     st.write(activity_to_desc[activity])
-    " "
-    "📍: " + place
+    st.text(" \n")
+
+    st.markdown(f"📍: {place}")
 
     iframe_html = generate_google_maps_embed(place)
-
     st.components.v1.html(iframe_html, height=450)
 
-    
+st.markdown('</div>', unsafe_allow_html=True)
