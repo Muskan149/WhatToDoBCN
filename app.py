@@ -183,6 +183,14 @@ st.set_page_config(
         page_icon="🇪🇸"                  
         )
 
+# Inject custom meta description
+st.markdown("""
+    <head>
+        <meta name="description" content="What the move?">
+    </head>
+    """, unsafe_allow_html=True)
+
+
 st.title("BCN Move 🇪🇸")
 st.text(" \n")
 
