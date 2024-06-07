@@ -176,12 +176,12 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Center align content
-st.markdown('<div class="center container">', unsafe_allow_html=True)
+st.markdown('<div style="text-align:center;">', unsafe_allow_html=True)
 
 st.title("BCN Move 🇪🇸")
 st.text(" \n")
 
-if st.button("What to Do"):
+if st.button("What's the Move?"):
     st.text(" \n")
     place = random_place()
     activity = place_to_activity[place]
@@ -193,6 +193,7 @@ if st.button("What to Do"):
     st.markdown(f"📍: {place}")
 
     iframe_html = generate_google_maps_embed(place)
-    st.components.html(iframe_html, height=450)
+
+    st.markdown(f'<div style="height:450px">{iframe_html}</div>', unsafe_allow_html=True)
 
 st.markdown('</div>', unsafe_allow_html=True)
