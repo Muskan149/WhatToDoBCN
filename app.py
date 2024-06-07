@@ -183,14 +183,6 @@ st.set_page_config(
         page_icon="🇪🇸"                  
         )
 
-# Inject custom meta description
-st.markdown("""
-    <head>
-        <meta name="description" content="What the move?">
-    </head>
-    """, unsafe_allow_html=True)
-
-
 st.title("BCN Move 🇪🇸")
 st.text(" \n")
 
@@ -207,6 +199,6 @@ if st.button("What's the Move?"):
 
     iframe_html = generate_google_maps_embed(place)
 
-    st.markdown(f'<div style="height:450px">{iframe_html}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div style="width:75%">{iframe_html}</div>', unsafe_allow_html=True)
 
 st.markdown('</div>', unsafe_allow_html=True)
