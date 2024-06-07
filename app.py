@@ -193,6 +193,6 @@ if st.button("What to Do"):
     st.markdown(f"📍: {place}")
 
     iframe_html = generate_google_maps_embed(place)
-    st.components.v1.html(iframe_html, height=450)
+    st.components.html(iframe_html, height=450)
 
 st.markdown('</div>', unsafe_allow_html=True)
