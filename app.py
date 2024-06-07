@@ -159,24 +159,29 @@ def random_place():
 
 
 
-# HTML and CSS to center align content
-st.markdown("""
-    <style>
-    .center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .container {
-        max-width: 600px;
-        margin: auto;
-    }
-    </style>
-    """, unsafe_allow_html=True)
+# # HTML and CSS to center align content
+# st.markdown("""
+#     <style>
+#     .center {
+#         display: flex;
+#         justify-content: center;
+#         align-items: center;
+#         flex-direction: column;
+#     }
+#     .container {
+#         max-width: 600px;
+#         margin: auto;
+#     }
+#     </style>
+#     """, unsafe_allow_html=True)
 
 # Center align content
-st.markdown('<div style="text-align:center;">', unsafe_allow_html=True)
+# st.markdown('<div style="text-align:center;">', unsafe_allow_html=True)
+
+st.set_page_config(
+        page_title="BCN Move 🇪🇸",
+        page_icon="🇪🇸"                  
+        )
 
 st.title("BCN Move 🇪🇸")
 st.text(" \n")
