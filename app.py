@@ -1,5 +1,6 @@
 import streamlit as st
 from google_maps_embed_helper import generate_google_maps_embed
+from get_images import get_images
 import random
 
 barcelona_activities = [
@@ -177,7 +178,7 @@ def random_place():
 
 # Center align content
 # st.markdown('<div style="text-align:center;">', unsafe_allow_html=True)
-
+image_link = "https://images.unsplash.com/photo-1629796181074-9369b939b1bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MjgzODR8MHwxfHNlYXJjaHwyfHxQYXJjJTIwR3VlbGx8ZW58MHx8fHwxNzE5Nzc2ODYxfDA&ixlib=rb-4.0.3&q=80&w=1080"
 st.set_page_config(
         page_title="BCN Move 🇪🇸",
         page_icon="🇪🇸"                  
@@ -200,5 +201,19 @@ if st.button("What's the Move?"):
     iframe_html = generate_google_maps_embed(place)
 
     st.markdown(f'<div style="width:75%">{iframe_html}</div>', unsafe_allow_html=True)
+
+
+    # st.image(get_images(place, 3), use_column_width=True)
+
+    st.text(" \n")
+    st.text(" \n")
+    st.text(" \n")
+
+
+
+    st.image(image_link)
+
+    st.image("https://images.unsplash.com/photo-1629796181074-9369b939b1bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MjgzODR8MHwxfHNlYXJjaHwyfHxQYXJjJTIwR3VlbGx8ZW58MHx8fHwxNzE5Nzc2ODYxfDA&ixlib=rb-4.0.3&q=80&w=1080", use_column_width=True)
+             
 
 st.markdown('</div>', unsafe_allow_html=True)
