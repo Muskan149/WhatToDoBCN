@@ -32,9 +32,9 @@ def get_images(query, per_page=10):
 
 # Example usage
 # client_id = 'vFoenFssCSTDzWqu3FR73QVaqm2h-gQihQpCW5Jeo-M'  # Replace with your Unsplash API key
-place = 'Parc Guell'
-images = get_images(place, 2)
+# place = 'Parc Guell'
+# images = get_images(place, 2)
 
-# Print the image URLs
-for idx, img_url in enumerate(images):
-    print(f"Image {idx + 1}: {img_url}")
+# # Print the image URLs
+# for idx, img_url in enumerate(images):
+#     print(f"Image {idx + 1}: {img_url}")
